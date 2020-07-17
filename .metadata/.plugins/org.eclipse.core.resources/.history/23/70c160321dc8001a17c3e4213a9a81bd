@@ -1,0 +1,5 @@
+package com.product.service.product.service.model;
+
+public class Customer {
+
+}

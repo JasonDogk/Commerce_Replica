@@ -1,0 +1,81 @@
+package com.product.service.user.service.model;
+
+import java.util.UUID;
+
+public class User {
+
+	private final UUID id;
+	private final String name;
+	private final String surname;
+	private final String gender;
+	private final int age;
+	private final int userCategory;
+	
+	private User(UserBuilder builder) {
+		this.id = builder.id;
+        this.name = builder.name;
+        this.surname= builder.surname;
+        this.gender = builder.gender;
+        this.age = builder.age;
+        this.userCategory = builder.userCategory;
+	}
+	
+	public UUID getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getSurname() {
+		return surname;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public int getAge() {
+		return age;
+	}
+	public int getUserCategory() {
+		return userCategory;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", surname=" + surname + ", gender=" + gender + ", age=" + age
+				+ ", userCategory=" + userCategory + "]";
+	}
+	
+	public static class UserBuilder{
+		
+		private final UUID id;
+		private final String name;
+		private final String surname;
+		private final String gender;
+		private final int age;
+		private final int userCategory;
+		
+		public UserBuilder(String name, String surname, String gender, int age, int userCategory) {
+			this.id = UUID.randomUUID();
+			this.name = name;
+			this.surname = surname;
+			this.gender = gender;
+			this.age = age;
+			this.userCategory = userCategory;
+		}
+		
+		public User build() {
+			User user = new User(this);
+			validateUserObject(user);
+			return user;
+		}
+		
+		private void validateUserObject(User user) {
+			
+			
+		}
+	}
+	
+	
+	
+	
+}

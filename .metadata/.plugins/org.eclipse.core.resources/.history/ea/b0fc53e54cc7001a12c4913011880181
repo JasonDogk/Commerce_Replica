@@ -1,0 +1,16 @@
+package com.product.service.user.service.service;
+
+import java.util.UUID;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.product.service.user.service.model.UserVO;
+@Repository
+public interface UserService{
+	
+	public UserVO createUser(UserVO user);
+	
+	public UserVO getUser(UUID id);
+
+}

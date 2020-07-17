@@ -1,0 +1,25 @@
+package com.product.service.user.service.dao;
+
+import java.util.UUID;
+import org.springframework.stereotype.Repository;
+import com.product.service.user.service.model.UserVO;
+
+@Repository
+public class UserDaoImpl implements UserDao{
+
+	@Override
+	public UUID saveUser(UserVO user) {
+		
+		return getDummyUser().getId();
+	}
+	
+	private UserVO getDummyUser() {
+		return new UserVO.UserBuilder("testName", "testSurname", "testGender", 10, 3).username("testUsername").build();
+	}
+
+	@Override
+	public UserVO getUserById(UUID id) {
+		return getDummyUser();
+	}
+
+}

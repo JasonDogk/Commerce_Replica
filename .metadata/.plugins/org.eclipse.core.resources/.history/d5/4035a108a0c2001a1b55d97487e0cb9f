@@ -1,0 +1,5 @@
+package com.product.service.user.service.model;
+
+public class User {
+
+}

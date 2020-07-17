@@ -1,0 +1,5 @@
+package com.product.service.user.service.dao;
+
+public interface UserDao {
+
+}

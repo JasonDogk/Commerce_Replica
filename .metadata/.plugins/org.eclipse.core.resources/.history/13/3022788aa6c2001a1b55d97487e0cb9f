@@ -1,0 +1,14 @@
+package com.product.service.user.service.service;
+
+import com.product.service.user.service.model.UserVO;
+
+public class UserManagerImpl implements UserManager{
+
+	@Override
+	public UserVO createUser(UserVO user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

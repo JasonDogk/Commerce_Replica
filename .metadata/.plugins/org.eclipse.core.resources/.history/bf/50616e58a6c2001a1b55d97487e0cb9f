@@ -1,0 +1,11 @@
+package com.product.service.user.service.dao;
+
+import java.util.UUID;
+
+import com.product.service.user.service.model.UserVO;
+
+public interface UserDao {
+	
+	public UUID saveUser(UserVO user);
+
+}

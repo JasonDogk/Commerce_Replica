@@ -1,0 +1,7 @@
+package com.product.service.product.service.model;
+
+public class User {
+	private String user;
+	private String password;
+	private String token;
+}

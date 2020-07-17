@@ -1,0 +1,18 @@
+package com.product.service.product.service.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.product.service.product.service.model.Customer;
+
+@Repository
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
+
+	@Query(value = "SELECT u FROM Customer u where u.username = ?1 and u.password = ?2 ")
+	Optional login(String username, String password);
+
+	Optional findByToken(String token);
+}

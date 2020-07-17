@@ -1,0 +1,8 @@
+package com.product.service.product.service.service;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProductService {
+
+}

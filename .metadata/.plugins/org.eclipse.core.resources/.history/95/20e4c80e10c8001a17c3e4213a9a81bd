@@ -1,0 +1,14 @@
+package com.product.service.product.service.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.product.service.product.service.model.Product;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long>{
+	//Product findByFirstName(String username);
+	//List<Product> findByLastName(String lastname);
+}

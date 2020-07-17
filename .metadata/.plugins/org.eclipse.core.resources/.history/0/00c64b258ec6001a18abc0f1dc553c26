@@ -1,0 +1,15 @@
+package com.product.service.user.service.dao;
+
+import java.util.UUID;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.product.service.user.service.model.UserVO;
+
+public interface UserDao extends CrudRepository<UserVO, UUID>{
+	
+	public String saveUser(UserVO user);
+
+	public UserVO getUserById(UUID id);
+
+}

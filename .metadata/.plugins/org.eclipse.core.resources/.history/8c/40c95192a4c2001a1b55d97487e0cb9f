@@ -1,0 +1,5 @@
+package com.product.service.user.service.service;
+
+public interface UserManager {
+
+}

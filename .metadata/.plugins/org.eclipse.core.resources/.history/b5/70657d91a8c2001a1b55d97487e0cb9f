@@ -1,0 +1,23 @@
+package com.product.service.user.service.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.product.service.user.service.dao.UserDao;
+import com.product.service.user.service.model.UserVO;
+
+@Service
+public class UserManagerImpl implements UserManager{
+	
+	@Autowired
+	UserDao userDao;
+
+	@Override
+	public UserVO createUser(UserVO user) {
+		userDao.saveUser(user);
+		userDao.getUserById(user.getId());
+		return null;
+	}
+
+	
+}
